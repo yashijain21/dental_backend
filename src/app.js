@@ -4,7 +4,7 @@ const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
 const galleryRoutes = require("./routes/galleryRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
-
+const appointmentRoutes = require("./routes/appoinmentRoutes");
 const app = express();
 
 app.use(cors());
@@ -32,6 +32,10 @@ app.use("/api/gallery", galleryRoutes);
 app.use(
   "/api/categories",
   categoryRoutes
+);
+app.use(
+  "/api/appointments",
+  appointmentRoutes
 );
 
 module.exports = app;
